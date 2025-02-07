@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookStore
 {
-    internal class BasicFuntions
+    public class BasicFunctions
     {
         public static Book? GetBookByTitle(string title)
         {
