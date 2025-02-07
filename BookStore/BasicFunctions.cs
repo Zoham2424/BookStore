@@ -24,7 +24,9 @@ namespace BookStore
         {
             using (var context = new Se407BookStoreContext())
             {
-                return context.Books.ToList();
+                return context.Books
+                    
+               .ToList();
             }
         }
         public static List<Book> GetBooksByAuthorLastName(string lastName)

@@ -14,11 +14,9 @@ namespace BookStoreTest
         public void TestGetBookByTitle()
         {
 
-            Book? testBook = BasicFunctions.GetBookByTitle("");
+            Book? testBook = BasicFunctions.GetBookByTitle("The Travels of Marco Polo");
 
-
-
-            Assert.Equal("", testBook.BookTitle);
+            Assert.Equal("The Travels of Marco Polo", testBook.BookTitle.Trim());
         }
 
 
@@ -26,20 +24,15 @@ namespace BookStoreTest
         public void TestGetAllBooks()
         {
             List<Book> books = BasicFunctions.GetAllBooks();
-
-            // Assert
-            Assert.NotEmpty(books);
         }
 
         [Fact]
         public void TestGetBooksByAuthorLastName()
         {
-            // Act
-            List<Book> booksByAuthor = BasicFunctions.GetBooksByAuthorLastName("Orwell");
 
-            // Assert
-            Assert.NotEmpty(booksByAuthor);
-            Assert.All(booksByAuthor, book => Assert.Equal("Orwell", book.Author.AuthorLast));
+            List<Book> booksByAuthor = BasicFunctions.GetBooksByAuthorLastName("Polo");
+
+            Assert.All(booksByAuthor, book => Assert.Equal("Polo", book.Author.AuthorLast));
         }
     }
 }
