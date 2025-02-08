@@ -38,7 +38,7 @@ namespace BookStoreConsole
         }
 
 
-        public static void ListObjects<TOutputObj>(IEnumerable<TOutputObj> objectsToShow)
+        public static void ListBooks<TOutputObj>(IEnumerable<TOutputObj> objectsToShow)
             where TOutputObj : class
         {
             PropertyInfo[] props = typeof(TOutputObj).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy);
